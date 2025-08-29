@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  pocketbase-user1:
+    build: .
+    container_name: pocketbase_user1
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./data/user1:/app/data
+    restart: unless-stopped
+
